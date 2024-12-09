@@ -18,9 +18,4 @@ public class EmployeeController {
     public ResponseEntity<EmployeeDTO> getEmployee(@PathVariable int empNo) {
         return ResponseEntity.ok(employeeService.getEmployee(empNo));
     }
-
-    @GetMapping("/{empNo}/formatted")
-    public ResponseEntity<String> getFormattedEmployee(@PathVariable int empNo) {
-        return ResponseEntity.ok(employeeService.getFormattedEmployee(empNo));
-    }
 }

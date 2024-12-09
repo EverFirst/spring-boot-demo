@@ -22,18 +22,4 @@ public class EmployeeService {
         }
         return employee;
     }
-
-    public String getFormattedEmployee(int empNo) {
-        EmployeeDTO emp = getEmployee(empNo);
-        return formatEmployeeOutput(emp);
-    }
-
-    private String formatEmployeeOutput(EmployeeDTO emp) {
-        return String.format("\n\nEmployee   Salary    Commission\n" +
-                           "--------   -------   ----------\n" +
-                           "%-10s %7.2f    %s\n",
-                           emp.getEmpName(),
-                           emp.getSalary(),
-                           emp.getComm() == null ? "NULL" : String.format("%7.2f", emp.getComm()));
-    }
 }
