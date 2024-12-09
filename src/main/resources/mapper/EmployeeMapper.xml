@@ -9,4 +9,15 @@
         FROM employee
         WHERE emp_no = #{empNo}
     </select>
+    <!-- 새로운 매핑 추가 -->
+    <insert id="insertEmployeeWithDept">
+        INSERT INTO employee (emp_no, deptno) 
+        VALUES (#{empNo}, #{deptno})
+    </insert>
+
+    <delete id="deleteEmployeeByDepts">
+        DELETE FROM employee 
+        WHERE deptno = #{param1} 
+        OR deptno = #{param2}
+    </delete>
 </mapper>

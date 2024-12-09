@@ -22,4 +22,14 @@ public class EmployeeService {
         }
         return employee;
     }
+
+    @Transactional
+    public void insertEmployeeWithDept(EmployeeDTO employee) {
+        employeeMapper.insertEmployeeWithDept(employee);
+    }
+
+    @Transactional
+    public void deleteEmployeeByDepts(int deptNo1, int deptNo2) {
+        employeeMapper.deleteEmployeeByDepts(deptNo1, deptNo2);
+    }
 }
