@@ -6,6 +6,7 @@ import com.example.demo.dto.EmployeeDTO;
 import com.example.demo.service.EmployeeService;
 
 @RestController
+@CrossOrigin(origins = "*")  // CORS 설정 추가
 @RequestMapping("/employee")
 public class EmployeeController {
     private final EmployeeService employeeService;

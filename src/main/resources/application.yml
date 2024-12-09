@@ -13,6 +13,8 @@ spring:
   sql:
     init:
       encoding: UTF-8
+  security:
+    enabled: false    
 
 mybatis:
   configuration:
@@ -24,4 +26,10 @@ logging:
     root: INFO
     com.example.demo: DEBUG
     org.springframework.web: DEBUG
-    org.springframework.http: TRACE  
+    org.springframework.security: DEBUG  # Security 로그도 추가
+    org.springframework.http: TRACE
+  file:
+    name: ./logs/application.log  # 로그 파일 위치 지정
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
