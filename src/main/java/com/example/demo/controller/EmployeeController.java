@@ -26,7 +26,7 @@ public class EmployeeController {
     }
 
     @DeleteMapping("/dept")
-    public ResponseEntity<Void> deleteEmployeeByDepts(
+    public ResponseEntity<Void> deleteEmployeeByDepts( 
         @RequestParam("deptNo1") int deptNo1,
         @RequestParam("deptNo2") int deptNo2) {
         employeeService.deleteEmployeeByDepts(deptNo1, deptNo2);
